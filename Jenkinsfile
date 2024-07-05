@@ -7,12 +7,11 @@ environment {
         IMAGE_TAG = "${env.BUILD_ID}"
     }
 
-    stages {
-        stage('Clone Repository') {
-            steps {
-                git 'https://github.com/PPravallika6/Demo.git'
-            }
-        }
+node {
+
+    stage('Clone repository') {
+        checkout scm
+    }
 
 
     stage('Build Docker Image') {
@@ -61,4 +60,5 @@ environment {
                 }
             }
 
+}
 }
