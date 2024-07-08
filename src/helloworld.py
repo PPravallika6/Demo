@@ -6,7 +6,11 @@ api = Api(app)
 
 class Greeting (Resource):
     def get(self):
+<<<<<<< HEAD
         return 'Hello People'
+=======
+        return 'Hello  Sunday Good !!!!'
+>>>>>>> 920300d9c3265c7065be0ccd22468b60bcc43c32
 
 api.add_resource(Greeting, '/') # Route_1
 
